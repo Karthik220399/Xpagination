@@ -27,12 +27,12 @@ export default function App() {
   async function getData() {
     try {
       const response = await fetch(
-        "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json"
+        "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json",
       );
       const data = await response.json();
       setTotalData(data);
     } catch (error) {
-      console.log(error.message);
+      alert("failed to fetch data");
     }
   }
 
